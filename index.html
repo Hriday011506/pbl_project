@@ -38,7 +38,6 @@ body {
 <!-- NAVBAR -->
 <nav class="fixed w-full z-50 glass border-b border-slate-800/50 px-10 py-4">
     <div class="flex items-center gap-4">
-
         <img src="./mujlogo.jpg"
              alt="Manipal University Jaipur"
              class="h-10 w-auto object-contain bg-white p-1 rounded shadow-md">
@@ -51,7 +50,6 @@ body {
                 Dept. of Computer Science & Engineering • MUJ
             </p>
         </div>
-
     </div>
 </nav>
 
@@ -81,89 +79,106 @@ body {
 <!-- PROBLEM + LITERATURE + GAP -->
 <section class="grid lg:grid-cols-2 gap-16 items-start">
 
-    <div class="glass p-12 rounded-[3rem] border-2 border-blue-600 min-h-[420px]">
-        <h2 class="text-4xl font-extrabold mb-6">Problem Statement</h2>
-        <p class="text-slate-400 leading-relaxed text-lg">
-            Large retail chains manage thousands of products across multiple stores.
-            Traditional ERP and POS systems rely primarily on historical sales and fixed reorder rules.
-            They fail to anticipate sudden hyperlocal demand shifts caused by festivals,
-            weather changes, local events, breaking news, or viral trends.
-        </p>
+<div class="glass p-12 rounded-[3rem] border-2 border-blue-600 min-h-[420px]">
+    <h2 class="text-4xl font-extrabold mb-6">Problem Statement</h2>
+    <p class="text-slate-400 leading-relaxed text-lg">
+        Large retail chains manage thousands of products across multiple stores.
+        Traditional ERP and POS systems rely primarily on historical sales and fixed reorder rules.
+        They fail to anticipate sudden hyperlocal demand shifts caused by festivals,
+        weather changes, local events, breaking news, or viral trends.
+    </p>
 
-        <ul class="list-disc pl-6 mt-6 text-slate-400 space-y-2">
-            <li>Frequent stockouts during demand spikes</li>
-            <li>Overstock during demand drops</li>
-            <li>Revenue loss due to static pricing</li>
-            <li>High holding costs and wastage</li>
-        </ul>
-    </div>
+    <ul class="list-disc pl-6 mt-6 text-slate-400 space-y-2">
+        <li>Frequent stockouts during demand spikes</li>
+        <li>Overstock during demand drops</li>
+        <li>Revenue loss due to static pricing</li>
+        <li>High holding costs and wastage</li>
+    </ul>
+</div>
 
-    <div class="flex flex-col gap-10">
+<div class="flex flex-col gap-10">
 
-        <div class="glass p-10 rounded-[2.5rem] border-2 border-blue-500 min-h-[200px]">
-            <h3 class="text-blue-400 font-bold text-sm uppercase tracking-widest mb-4">
-                Literature Review / Market Research
-            </h3>
-            <p class="text-slate-400 italic">
-                Research shows AI-based forecasting improves retail efficiency
-                when external signals like weather and local events are included.
-                Dynamic pricing models increase revenue and optimize profit margins.
-                However, most systems treat forecasting and pricing separately.
-            </p>
-        </div>
+<div class="glass p-10 rounded-[2.5rem] border-2 border-blue-500 min-h-[200px]">
+    <h3 class="text-blue-400 font-bold text-sm uppercase tracking-widest mb-4">
+        Literature Review / Market Research
+    </h3>
+    <p class="text-slate-400 italic">
+        Research shows AI-based forecasting improves retail efficiency
+        when external signals like weather and local events are included.
+        Dynamic pricing models increase revenue and optimize profit margins.
+        However, most systems treat forecasting and pricing separately.
+    </p>
+</div>
 
-        <div class="glass p-10 rounded-[2.5rem] border-2 border-purple-500 min-h-[200px]">
-            <h3 class="text-purple-400 font-bold text-sm uppercase tracking-widest mb-4">
-                Research Gap / Innovation
-            </h3>
-            <p class="text-slate-400 italic">
-                Existing systems lack an integrated framework combining predictive demand sensing,
-                dynamic pricing, automated restocking, and financial simulation.
-                This project develops a unified AI-driven retail optimization engine
-                capable of real-time autonomous decision-making.
-            </p>
-        </div>
+<div class="glass p-10 rounded-[2.5rem] border-2 border-purple-500 min-h-[200px]">
+    <h3 class="text-purple-400 font-bold text-sm uppercase tracking-widest mb-4">
+        Research Gap / Innovation
+    </h3>
+    <p class="text-slate-400 italic">
+        Existing systems lack an integrated framework combining predictive demand sensing,
+        dynamic pricing, automated restocking, and financial simulation.
+        This project develops a unified AI-driven retail optimization engine
+        capable of real-time autonomous decision-making.
+    </p>
+</div>
 
-    </div>
+</div>
 </section>
 
 <!-- SYSTEM METHODOLOGY -->
 <section class="space-y-16">
 
-    <h2 class="text-5xl font-black text-center uppercase tracking-tight">
-        System <span class="text-blue-500">Methodology</span>
-    </h2>
+<h2 class="text-5xl font-black text-center uppercase tracking-tight">
+    System <span class="text-blue-500">Methodology</span>
+</h2>
 
-    <div class="grid md:grid-cols-3 gap-16 mt-20">
+<div class="grid md:grid-cols-3 gap-16 mt-20">
 
-        <div class="glass p-12 rounded-[2.5rem] text-center border border-slate-700 min-h-[260px] flex flex-col justify-center">
-            <i class="fas fa-database text-blue-500 text-4xl mb-6"></i>
-            <h3 class="font-bold mb-4 uppercase tracking-widest text-sm">Dataset / Input</h3>
-            <p class="text-slate-500 italic text-sm">
-                [Dataset details will be added here]
-            </p>
-        </div>
+<!-- DATASET -->
+<div class="glass p-12 rounded-[2.5rem] text-center border border-slate-700 min-h-[260px] flex flex-col justify-center">
+    <i class="fas fa-database text-blue-500 text-4xl mb-6"></i>
+    <h3 class="font-bold mb-4 uppercase tracking-widest text-sm">Dataset / Input</h3>
+    <p class="text-slate-500 italic text-sm leading-relaxed">
+        Kaggle Store Sales Time Series Forecasting Dataset<br><br>
+        • train.csv (Historical sales data)<br>
+        • holidays_events.csv (Holiday impact data)<br><br>
+        Feature Engineering includes lag features and seasonal encoding.
+    </p>
+</div>
 
-        <div class="glass p-12 rounded-[2.5rem] text-center border border-slate-700 min-h-[260px] flex flex-col justify-center">
-            <i class="fas fa-microchip text-purple-500 text-4xl mb-6"></i>
-            <h3 class="font-bold mb-4 uppercase tracking-widest text-sm">Model / Architecture</h3>
-            <p class="text-slate-500 italic text-sm">
-                [Model workflow and algorithms will be added here]
-            </p>
-        </div>
+<!-- MODEL -->
+<div class="glass p-12 rounded-[2.5rem] text-center border border-slate-700 min-h-[260px] flex flex-col justify-center">
+    <i class="fas fa-microchip text-purple-500 text-4xl mb-6"></i>
+    <h3 class="font-bold mb-4 uppercase tracking-widest text-sm">Model / Architecture</h3>
+    <p class="text-slate-500 italic text-sm leading-relaxed">
+        Random Forest Regressor (Ensemble Learning)<br><br>
+        Features Used:<br>
+        • Holiday Count<br>
+        • Viral Score<br>
+        • Previous Month Sales (Lag)<br>
+        • Month Encoding<br><br>
+        TimeSeriesSplit Cross Validation applied.
+    </p>
+</div>
 
-        <div class="glass p-12 rounded-[2.5rem] text-center border border-green-600 bg-green-900/10 min-h-[260px] flex flex-col justify-center">
-            <i class="fab fa-github text-green-400 text-4xl mb-6"></i>
-            <h3 class="font-bold mb-4 uppercase tracking-widest text-sm text-green-400">Live Execution</h3>
-            <p class="text-slate-500 italic text-sm mb-4">
-                [GitHub repository link will be added here]
-            </p>
-            <button class="px-6 py-2 bg-green-600 rounded-full text-xs font-bold opacity-50 cursor-not-allowed">
-                VIEW CODE / DEMO
-            </button>
-        </div>
+<!-- LIVE EXECUTION -->
+<div class="glass p-12 rounded-[2.5rem] text-center border border-green-600 bg-green-900/10 min-h-[260px] flex flex-col justify-center">
+    <i class="fas fa-rocket text-green-400 text-4xl mb-6"></i>
+    <h3 class="font-bold mb-4 uppercase tracking-widest text-sm text-green-400">
+        Live Execution
+    </h3>
+    <p class="text-slate-500 italic text-sm mb-6 leading-relaxed">
+        AI-Driven Demand Forecasting & Dynamic Pricing System<br>
+        Deployed on Streamlit Cloud
+    </p>
+    <a href="https://aidp-engine-df7cjw6cx3jun4bop6pfxi.streamlit.app/" 
+       target="_blank"
+       class="px-6 py-2 bg-green-600 hover:bg-green-500 transition-all duration-300 rounded-full text-xs font-bold inline-block">
+        VIEW LIVE APPLICATION
+    </a>
+</div>
 
-    </div>
+</div>
 </section>
 
 <!-- RESULTS -->
