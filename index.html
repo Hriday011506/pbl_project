@@ -1,38 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AIDP System | PBL 2026</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap');
-        body { background-color: #020617; color: #f8fafc; font-family: 'Plus Jakarta Sans', sans-serif; scroll-behavior: smooth; }
-        .glass { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(15px); border: 1px solid rgba(255, 255, 255, 0.1); }
-        .gradient-text { background: linear-gradient(90deg, #60a5fa, #a855f7); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+<main class="max-w-6xl mx-auto px-6 pt-48 pb-32 space-y-32">
 
-        #timerContainer { background: #ffffff; color: #020617; box-shadow: 0 10px 40px rgba(0,0,0,0.8); border: 3px solid #3b82f6; z-index: 1000; }
-    </style>
-</head>
-
-<body onload="startTimer()">
-
-<div id="timerContainer" class="fixed bottom-10 right-10 px-8 py-4 rounded-3xl flex items-center gap-4 transition-all">
-    <i class="fas fa-hourglass-start text-blue-600 text-2xl"></i>
-    <span id="displayTime" class="text-4xl font-black font-mono tracking-tighter">00:00</span>
-</div>
-
-<nav class="fixed w-full z-50 glass border-b border-slate-800/50 px-8 py-4 flex justify-between items-center">
-    <div>
-        <span class="text-xl font-black uppercase">PBL <span class="text-blue-500 italic">2026</span></span>
-        <p class="text-[9px] text-slate-400 uppercase tracking-widest">Dept. of CSE | MUJ</p>
-    </div>
-</nav>
-
-<main class="max-w-6xl mx-auto px-6 pt-40 pb-32 space-y-32">
-
+<!-- HERO SECTION -->
 <section class="text-center">
     <div class="inline-block px-4 py-1 border border-slate-800 rounded-full text-slate-500 text-[10px] font-mono mb-6 uppercase tracking-widest">
         ID: 2427030635
@@ -45,44 +13,110 @@
     </h1>
 
     <p class="text-slate-400 max-w-3xl mx-auto italic text-lg leading-relaxed border-l-2 border-blue-500/30 pl-6 text-left">
-        An AI-powered retail optimization system that predicts hyperlocal demand shifts using external signals like weather, events, and social trends, and dynamically adjusts inventory and pricing in real-time to maximize revenue and reduce stock inefficiencies.
+        <strong>Hypothesis / Project Statement:</strong><br>
+        Can artificial intelligence models leverage hyperlocal external signals such as weather forecasts,
+        regional events, social media trends, and historical sales data to accurately predict SKU-level demand
+        and autonomously optimize pricing and inventory decisions in real time to maximize retail profitability
+        and minimize stock inefficiencies?
     </p>
 </section>
 
+
+<!-- PROBLEM STATEMENT -->
 <section class="glass p-10 rounded-[2.5rem] border-l-4 border-blue-600">
     <h2 class="text-3xl font-extrabold mb-6">Problem Statement</h2>
     <p class="text-slate-400 leading-relaxed text-justify">
-        Traditional retail systems fail to predict sudden local demand shifts and adjust prices dynamically, leading to stockouts, overstock, lost revenue, and reduced profit margins. Current ERP/POS systems rely only on historical sales and fixed reorder rules without considering external demand signals.
+        Large retail chains manage thousands of SKUs across multiple locations.
+        Traditional ERP and POS systems rely primarily on historical sales data
+        and fixed reorder rules. These systems do not account for sudden hyperlocal
+        demand fluctuations caused by weather changes, festivals, local events,
+        breaking news, or viral social media trends.
+        <br><br>
+        As a result, retailers frequently face:
+        <ul class="list-disc pl-6 mt-4 text-slate-400 space-y-2">
+            <li>Stockouts during unexpected demand spikes</li>
+            <li>Overstock during demand drops</li>
+            <li>Revenue loss due to poor pricing strategies</li>
+            <li>High holding costs and product wastage</li>
+        </ul>
+        <br>
+        Therefore, there is a strong need for an intelligent system capable of
+        predictive demand sensing and autonomous pricing adjustments.
     </p>
 </section>
 
+
+<!-- LITERATURE REVIEW -->
 <section class="glass p-10 rounded-[2.5rem] border-l-4 border-purple-600">
-    <h2 class="text-3xl font-extrabold mb-6">Proposed Solution</h2>
+    <h2 class="text-3xl font-extrabold mb-6">Literature Review</h2>
     <p class="text-slate-400 leading-relaxed text-justify">
-        The AIDP System integrates historical sales data with external signals such as weather forecasts, regional events, news trends, and social media signals. Using ML models like LSTM, Transformer, and Gradient Boosting, the system predicts SKU-level demand and applies a dynamic pricing engine to optimize profitability while minimizing waste.
+        Existing research highlights the role of AI and Machine Learning in retail demand forecasting.
+        Studies from industry leaders such as BCG, Grid Dynamics, and Xoriant demonstrate that
+        predictive analytics improves demand forecasting accuracy when incorporating weather data,
+        local event signals, and consumer behavior analytics.
+        <br><br>
+        Dynamic pricing models using demand elasticity estimation have also been shown to increase
+        revenue and optimize profit margins. However, many current implementations operate
+        independently, focusing either on forecasting or pricing rather than an integrated system.
     </p>
 </section>
 
-<section class="glass p-12 rounded-[3.5rem] border-t-4 border-blue-500">
-    <h2 class="text-3xl font-black mb-12 text-center uppercase tracking-tight">
-        Results & <span class="text-blue-500">Impact</span>
+
+<!-- RESEARCH GAP -->
+<section class="glass p-10 rounded-[2.5rem] border-l-4 border-green-600">
+    <h2 class="text-3xl font-extrabold mb-6">Research Gap</h2>
+    <p class="text-slate-400 leading-relaxed text-justify">
+        While several AI-based forecasting tools exist, most systems:
+        <ul class="list-disc pl-6 mt-4 text-slate-400 space-y-2">
+            <li>Do not integrate hyperlocal external signals in real time</li>
+            <li>Lack autonomous dynamic pricing mechanisms</li>
+            <li>Do not simulate financial impact across different scenarios</li>
+            <li>Operate as advisory systems rather than automated decision engines</li>
+        </ul>
+        <br>
+        This project aims to bridge this gap by creating a unified AI-driven
+        predictive inventory and dynamic pricing framework.
+    </p>
+</section>
+
+
+<!-- METHODOLOGY PLACEHOLDERS -->
+<section id="methodology" class="space-y-12">
+    <h2 class="text-4xl font-black text-center uppercase tracking-tight">
+        System <span class="text-blue-500">Methodology</span>
     </h2>
 
-    <div class="grid md:grid-cols-2 gap-16 items-center">
-        <div class="h-80"><canvas id="resultsChart"></canvas></div>
+    <div class="grid md:grid-cols-3 gap-8">
 
-        <div class="space-y-6">
-            <div class="p-6 rounded-2xl bg-white/5 flex justify-between items-center border border-white/10">
-                <span class="text-slate-400 font-bold uppercase text-xs tracking-widest">Forecast Accuracy</span>
-                <span class="text-blue-400 font-mono font-black text-3xl">92%</span>
-            </div>
-            <p class="text-slate-500 text-sm italic text-justify leading-relaxed">
-                Improved demand forecasting accuracy, reduction in stockouts, optimized pricing strategies, and better financial scenario simulations for retail decision-making.
+        <div class="glass p-8 rounded-3xl text-center border border-dashed border-slate-600">
+            <i class="fas fa-database text-blue-500 text-3xl mb-4"></i>
+            <h3 class="font-bold mb-2 uppercase text-xs tracking-widest">Dataset</h3>
+            <p class="text-sm text-slate-500 italic">
+                [To be added: dataset source, number of records, preprocessing steps]
             </p>
         </div>
+
+        <div class="glass p-8 rounded-3xl text-center border border-dashed border-slate-600">
+            <i class="fas fa-microchip text-purple-500 text-3xl mb-4"></i>
+            <h3 class="font-bold mb-2 uppercase text-xs tracking-widest">Model / Architecture</h3>
+            <p class="text-sm text-slate-500 italic">
+                [To be added: ML models used (LSTM / Transformer / Gradient Boosting), system workflow]
+            </p>
+        </div>
+
+        <div class="glass p-8 rounded-3xl text-center border border-dashed border-slate-600">
+            <i class="fab fa-github text-green-500 text-3xl mb-4"></i>
+            <h3 class="font-bold mb-2 uppercase text-xs tracking-widest">Live Execution</h3>
+            <p class="text-sm text-slate-500 italic">
+                [To be added: GitHub repository link / Demo link]
+            </p>
+        </div>
+
     </div>
 </section>
 
+
+<!-- TEAM SECTION -->
 <section class="text-center pt-10 border-t border-slate-900">
     <h2 class="text-[10px] font-black text-slate-600 uppercase tracking-[0.5em] mb-12">
         Academic Credits
@@ -111,49 +145,3 @@
 </section>
 
 </main>
-
-<footer class="py-12 text-center bg-black/40 border-t border-slate-900">
-    <p class="text-slate-600 text-[10px] font-bold tracking-[0.3em] uppercase mb-2">
-        Manipal University Jaipur
-    </p>
-    <p class="text-slate-500 text-[9px] font-medium tracking-[0.2em] uppercase opacity-50">
-        Department of Computer Science & Engineering • 2026
-    </p>
-</footer>
-
-<script>
-let sec = 0;
-let timer = null;
-function startTimer() {
-    timer = setInterval(() => {
-        sec++;
-        let m = Math.floor(sec / 60);
-        let s = sec % 60;
-        document.getElementById('displayTime').innerText =
-            `${m.toString().padStart(2, '0')}:${s.toString().padStart(2, '0')}`;
-    }, 1000);
-}
-
-const ctx = document.getElementById('resultsChart').getContext('2d');
-new Chart(ctx, {
-    type: 'bar',
-    data: {
-        labels: ['Traditional ERP System', 'AIDP System'],
-        datasets: [{
-            data: [70, 92],
-            backgroundColor: ['#1e293b', '#3b82f6'],
-            borderRadius: 15,
-            barThickness: 50
-        }]
-    },
-    options: {
-        responsive: true,
-        maintainAspectRatio: false,
-        plugins: { legend: { display: false } },
-        scales: { y: { beginAtZero: true } }
-    }
-});
-</script>
-
-</body>
-</html>
